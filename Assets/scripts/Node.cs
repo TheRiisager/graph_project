@@ -7,7 +7,7 @@ public class Node : MonoBehaviour
     [SerializeField]
     private List<Node> list = new List<Node>();
     private Dictionary<float, Node> connections = new Dictionary<float, Node>();
-    private float fCost;
+    private float fCost = float.MaxValue;
     private Node parent;
     // Start is called before the first frame update
     void Start()
@@ -54,5 +54,14 @@ public class Node : MonoBehaviour
     public Dictionary<float, Node> getConnections()
     {
         return this.connections;
+    }
+
+    void OnDrawGizmos()
+    {
+       Gizmos.color = Color.magenta;
+       foreach (var item in this.connections)
+       {
+        Gizmos.DrawLine(this.transform.position, item.Value.transform.position);
+       } 
     }
 }
