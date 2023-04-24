@@ -4,7 +4,7 @@
 ![scene view](/images/network.PNG)
 
 This project is a very simple implementation of the A* algorithm, that can be used to traverse a network of nodes in 3D space.
-It simply uses the unity Vector3 distance function as a heuristic, measuring the distance between the node it is currently evaluating and the target node.
+
 
 ## Theory
 The A* algorithm can be seen as an extension of Dijkstra's shortest path algorithm.<br>
@@ -25,3 +25,7 @@ In greater detail, A* works as follows:<br>
       - set fcost of neighbor to the new value
       - set the parent of the neighbor to the current node
       - add the neighbor to the open list if it is not already there 
+
+## Implementation
+This implementation simply uses the unity Vector3 distance function as a heuristic, measuring the distance between the node it is currently evaluating and the target node.
+It can only support one agent moving on the graph, as the fcost is saved on the nodes.
