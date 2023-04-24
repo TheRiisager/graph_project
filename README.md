@@ -29,3 +29,6 @@ In greater detail, A* works as follows:<br>
 ## Implementation
 This implementation simply uses the unity Vector3 distance function as a heuristic, measuring the distance between the node it is currently evaluating and the target node.
 It can only support one agent moving on the graph, as the fcost is saved on the nodes.
+
+## Code walkthrough
+https://youtu.be/XSuiMrDMGMY
